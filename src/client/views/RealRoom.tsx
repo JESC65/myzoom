@@ -4,12 +4,11 @@ import { useRealtimeKitClient } from '@cloudflare/realtimekit-react';
 import { RtkMeeting, useLanguage } from '@cloudflare/realtimekit-react-ui';
 import type { Role } from '../../shared/contracts.ts';
 import { es } from '../i18n/es.ts';
+import { isEndingState } from '../roomState.ts';
 
 // useLanguage is a plain factory (not a React hook) in the UI Kit.
 const t = useLanguage(es);
 
-/** Leave states that end the room for us; 'connected-meeting' and 'stageLeft' do not. */
-const ENDING_STATES = new Set(['left', 'ended', 'kicked', 'rejected', 'disconnected', 'failed']);
 
 export default function RealRoom({ authToken, rol, onLeft }: { authToken: string; rol: Role; onLeft: (reason: string) => void }) {
   const [meeting, initMeeting] = useRealtimeKitClient();
@@ -26,7 +25,7 @@ export default function RealRoom({ authToken, rol, onLeft }: { authToken: string
 
   useEffect(() => {
     if (!meeting) return;
-    const handler = ({ state }: { state: string }) => { if (ENDING_STATES.has(state)) onLeftRef.current(state); };
+    const handler = ({ state }: { state: string }) => { if (isEndingState(state)) onLeftRef.current(state); };
     meeting.self.addListener('roomLeft', handler);
     return () => { meeting.self.removeListener('roomLeft', handler); };
   }, [meeting]);
