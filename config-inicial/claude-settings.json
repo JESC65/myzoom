@@ -1,0 +1,58 @@
+{
+  "env": {
+    "BASH_DEFAULT_TIMEOUT_MS": "600000",
+    "BASH_MAX_TIMEOUT_MS": "1800000"
+  },
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(npm *)", "Bash(npx *)", "Bash(node *)", "Bash(corepack *)",
+      "Bash(npx playwright install*)", "Bash(npx -y playwright@* install*)",
+      "Bash(cd *)", "Bash(ls*)", "Bash(cat *)", "Bash(head *)", "Bash(tail *)", "Bash(wc *)",
+      "Bash(grep *)", "Bash(rg *)", "Bash(find *)", "Bash(sort *)", "Bash(uniq *)", "Bash(cut *)",
+      "Bash(tr *)", "Bash(sed *)", "Bash(awk *)", "Bash(jq *)", "Bash(diff *)", "Bash(cmp *)",
+      "Bash(file *)", "Bash(stat *)", "Bash(which *)", "Bash(command -v *)", "Bash(type *)",
+      "Bash(echo *)", "Bash(printf *)", "Bash(pwd)", "Bash(env)", "Bash(printenv*)", "Bash(date*)",
+      "Bash(du *)", "Bash(df *)", "Bash(free*)", "Bash(nproc)", "Bash(uname*)", "Bash(id*)", "Bash(whoami)",
+      "Bash(mkdir *)", "Bash(cp *)", "Bash(mv *)", "Bash(rm *)", "Bash(touch *)", "Bash(chmod *)", "Bash(ln *)",
+      "Bash(tar *)", "Bash(zip *)", "Bash(unzip *)", "Bash(gzip *)", "Bash(gunzip *)",
+      "Bash(sha256sum *)", "Bash(openssl *)", "Bash(curl *)",
+      "Bash(ps *)", "Bash(pgrep *)", "Bash(kill *)", "Bash(pkill *)", "Bash(sleep *)", "Bash(ss *)",
+      "Bash(git status*)", "Bash(git diff*)", "Bash(git log*)", "Bash(git show*)", "Bash(git blame *)",
+      "Bash(git grep *)", "Bash(git ls-files*)", "Bash(git ls-remote*)", "Bash(git cat-file *)",
+      "Bash(git merge-base *)", "Bash(git rev-parse *)", "Bash(git describe*)", "Bash(git reflog*)",
+      "Bash(git remote*)", "Bash(git config *)",
+      "Bash(git add *)", "Bash(git commit *)", "Bash(git mv *)", "Bash(git rm *)",
+      "Bash(git switch *)", "Bash(git checkout *)", "Bash(git restore *)", "Bash(git branch*)",
+      "Bash(git merge *)", "Bash(git cherry-pick *)", "Bash(git stash*)", "Bash(git worktree *)",
+      "Bash(git fetch*)", "Bash(git pull*)", "Bash(git bundle *)", "Bash(git reset --soft *)",
+      "Bash(git push)", "Bash(git push origin *)", "Bash(git push -u origin *)", "Bash(git push --set-upstream origin *)",
+      "Bash(apt-get update*)", "Bash(apt-get install *)", "Bash(sudo apt-get *)", "Bash(dpkg -l*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /)", "Bash(rm -rf /*)", "Bash(rm -rf ~)", "Bash(rm -rf ~/*)",
+      "Bash(rm -rf .git)", "Bash(rm -rf .git/*)", "Bash(rm -rf ./.git)",
+      "Bash(git push *--force*)", "Bash(git push -f*)", "Bash(git push * -f*)", "Bash(git push * +*)",
+      "Bash(git push *--delete*)", "Bash(git push * -d *)", "Bash(git push * :*)", "Bash(git push *--mirror*)",
+      "Bash(git reset --hard*)", "Bash(git clean -f*)", "Bash(git checkout -- .*)", "Bash(git checkout .*)",
+      "Bash(git restore .*)", "Bash(git branch -D *)", "Bash(git tag *)", "Bash(git filter-branch*)",
+      "Bash(npm publish*)", "Bash(npm adduser*)", "Bash(npm login*)",
+      "Bash(npx wrangler deploy*)", "Bash(npx wrangler login*)", "Bash(npx wrangler secret*)",
+      "Bash(wrangler deploy*)", "Bash(wrangler login*)", "Bash(wrangler secret*)",
+      "Bash(npm run deploy*)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR:-.}/scripts/session-start.mjs\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

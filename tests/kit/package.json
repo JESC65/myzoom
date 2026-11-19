@@ -1,0 +1,6 @@
+{
+  "name": "kit-tests",
+  "private": true,
+  "description": "Permite ejecutar las pruebas del kit con: node --test tests/kit/",
+  "main": "herramientas.test.mjs"
+}

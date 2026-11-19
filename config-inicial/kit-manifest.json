@@ -1,0 +1,89 @@
+{
+  "version": "1.0",
+  "fecha": "2026-11-19",
+  "proyecto": "MyZoom",
+  "nota": "Lista de archivos del kit con su huella SHA-256 (normalizada: JSON por contenido; texto sin BOM, con LF y sin espacios finales; imágenes byte a byte). La usa scripts/preflight.mjs para comprobar que el kit llegó completo.",
+  "archivos": [
+    {
+      "ruta": "MYZOOM_Encargo_Agente_v1.md",
+      "bytes": 78066,
+      "sha256": "71249e006c2da9dee0eeb14ffc03803d39d51aeadada8861707009544d4a23c0",
+      "obligatorio": true,
+      "alternativas": [
+        "docs/ENCARGO.md"
+      ]
+    },
+    {
+      "ruta": "README.md",
+      "bytes": 1231,
+      "sha256": "23284b38c0383008563fc039eb11974edb62b3ebff6e16a5a1e2a5628573846c",
+      "obligatorio": false
+    },
+    {
+      "ruta": "config-inicial/agents/Explore.md",
+      "bytes": 1471,
+      "sha256": "f0e3f4393418c7cd01066f7214c2fc529b4ffbfb17bc65f4594fd18d04744126",
+      "obligatorio": true
+    },
+    {
+      "ruta": "config-inicial/agents/auditor-independiente.md",
+      "bytes": 3064,
+      "sha256": "c26e5e6c3ca830d22e1102d8a323f31a46dd356b967d1f8dbb7e85b517bbf5fa",
+      "obligatorio": true
+    },
+    {
+      "ruta": "config-inicial/claude-settings.json",
+      "bytes": 3360,
+      "sha256": "bf8658a92a75fed18c0b93411db8a33dcadff67f54d8cdc81a69a1121e513978",
+      "obligatorio": true
+    },
+    {
+      "ruta": "config-inicial/gitignore.txt",
+      "bytes": 459,
+      "sha256": "a7a37322b3b267b5975c64a2e45359fb264e31ed71d509a01339d5c2ec96fe07",
+      "obligatorio": true
+    },
+    {
+      "ruta": "docs/spec/San_Antonio_Insignia.jpeg",
+      "bytes": 31816,
+      "sha256": "cca3be3ddbd2748422ff96c36c34c95abfccb9fbd86988afb71b0704173a7ab7",
+      "obligatorio": true
+    },
+    {
+      "ruta": "scripts/ayuda.mjs",
+      "bytes": 12880,
+      "sha256": "564da3024a601a267e22b19423eda1158cc2709a97d958f94cac9bcf641440ec",
+      "obligatorio": true
+    },
+    {
+      "ruta": "scripts/preflight.mjs",
+      "bytes": 35529,
+      "sha256": "0785ce17335af0f64e3189466beb4c1f551a144350aaa9ebf1b051415c8f0d79",
+      "obligatorio": true
+    },
+    {
+      "ruta": "scripts/run.mjs",
+      "bytes": 12737,
+      "sha256": "e80df0fcff67acbebbc12574e38a97a757b7fbaf550d394085fa54ca67d32827",
+      "obligatorio": true
+    },
+    {
+      "ruta": "scripts/session-start.mjs",
+      "bytes": 9748,
+      "sha256": "8fbb154a2ad56b2c5c7468be04e1cc27202e21f9544a41d62e69e98d87f85b36",
+      "obligatorio": true
+    },
+    {
+      "ruta": "tests/kit/herramientas.test.mjs",
+      "bytes": 15448,
+      "sha256": "fcf17068d78f58551a3e4250dad0e288bef39b6ae3b76cc28dc9e52163ab0a23",
+      "obligatorio": true
+    },
+    {
+      "ruta": "tests/kit/package.json",
+      "bytes": 165,
+      "sha256": "ad17a39e2779baaa7dddc37a0d2b0b47d7e552849a480436b9cab34015cc757b",
+      "obligatorio": true
+    }
+  ]
+}

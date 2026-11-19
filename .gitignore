@@ -1,0 +1,26 @@
+# Registros locales de scripts/run.mjs y del gancho de inicio: nunca van a GitHub.
+logs/
+
+# Dependencias y compilados
+node_modules/
+dist/
+coverage/
+.vite/
+.wrangler/
+playwright-report/
+test-results/
+
+# Secretos: solo existen en Cloudflare o en tu equipo. Las plantillas *.example sí se suben.
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+
+# Archivos temporales de la verificación previa
+.preflight-*.tmp
+
+# Sistema
+.DS_Store
+Thumbs.db
