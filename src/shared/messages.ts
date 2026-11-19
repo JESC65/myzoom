@@ -1,0 +1,26 @@
+// User-facing texts shared by Worker and client (Spanish, Peru).
+
+export const MSG = {
+  notOpenYet: (whenLima: string) => `La reunión todavía no empieza. Se abre el ${whenLima}.`,
+  alreadyClosed: 'La reunión ya terminó. ¡Gracias por acompañarnos!',
+  invalidInvite: 'El enlace no es válido. Pide el enlace actualizado en el grupo de la promoción.',
+  missingInvite: 'A este enlace le falta el código de invitación. Pide el enlace en el grupo de la promoción.',
+  nameInvalid: 'Escribe tu nombre y apellido (de 2 a 60 letras).',
+  cityInvalid: 'Escribe la ciudad desde donde nos acompañas (de 2 a 50 letras).',
+  fallbackActive: 'Nos cambiamos de sala. Toca el botón para ir a la sala de respaldo.',
+  fallbackBanner: 'Nos cambiamos de sala. Toca aquí para ir a la sala de respaldo.',
+  notReady: 'La sala todavía no está lista. Avísale al organizador por WhatsApp.',
+  serviceError: 'No pudimos conectarte en este momento. Espera unos segundos y vuelve a intentarlo.',
+  badRequest: 'Los datos enviados no son válidos. Recarga la página e inténtalo otra vez.',
+  wrongContentType: 'Los datos deben enviarse en formato JSON.',
+  bodyTooLarge: 'Los datos enviados son demasiado grandes.',
+  foreignOrigin: 'Esta petición no viene de la página de la reunión.',
+  notFound: 'No encontramos lo que buscas.',
+  methodNotAllowed: 'Esta acción no está permitida aquí.',
+  hostWrongSecret: 'La clave del anfitrión no es correcta.',
+  hostNotConfigured: 'La clave del anfitrión no está configurada en Cloudflare (HOST_SECRET, mínimo 12 caracteres).',
+  hostUnauthorized: 'Tu sesión de anfitrión no es válida o venció. Escribe la clave otra vez.',
+  meetingAlreadySet: 'Ya hay una reunión configurada (RTK_MEETING_ID). No hace falta crear otra.',
+  meetingCreatedNext: 'Copia este identificador y pégalo en Cloudflare como la variable RTK_MEETING_ID; luego guarda y despliega.',
+  browserHint: 'Si no ves o no oyes, abre este enlace en Chrome o Safari.',
+} as const;

@@ -1,0 +1,46 @@
+{
+  "name": "myzoom",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MyZoom · Promoción 81 · Reunión virtual (Cloudflare Workers + RealtimeKit)",
+  "license": "UNLICENSED",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "dev": "vite build && wrangler dev --local",
+    "build": "vite build",
+    "check": "tsc -p tsconfig.json --noEmit && node scripts/check-static.mjs",
+    "test": "node --test --test-reporter=spec \"tests/worker/**/*.test.ts\"",
+    "test:e2e": "playwright test --grep-invert @a11y",
+    "test:a11y": "playwright test --grep @a11y",
+    "test:dist": "node --test --test-reporter=spec \"tests/dist/*.test.mjs\"",
+    "demo": "node scripts/demo.mjs",
+    "notices": "node scripts/notices.mjs",
+    "doctor": "node scripts/preflight.mjs",
+    "ayuda": "node scripts/ayuda.mjs",
+    "session:status": "node scripts/session-start.mjs",
+    "test:kit": "node --test tests/kit/"
+  },
+  "dependencies": {
+    "@cloudflare/realtimekit-react": "2.1.0",
+    "@cloudflare/realtimekit-react-ui": "2.1.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.63.0",
+    "@types/node": "22.20.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "typescript": "5.9.3",
+    "vite": "8.3.8",
+    "wrangler": "4.165.0"
+  },
+  "overrides": {
+    "playwright-core": "1.63.0"
+  }
+}

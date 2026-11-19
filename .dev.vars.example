@@ -1,0 +1,22 @@
+# MyZoom · plantilla para el modo ensayo local (copiar a .dev.vars; .dev.vars NO se sube a GitHub).
+# Valores SINTÉTICOS. Los reales viven solo en Cloudflare (Settings → Variables and Secrets).
+# Una variable ausente y una vacía significan lo mismo.
+
+# --- Secretos (en Cloudflare: tipo Secret) ---
+CF_API_TOKEN=ensayo-token-no-real
+HOST_SECRET=ensayo-clave-anfitrion-0000
+INVITE_CODE=ensayo81
+
+# --- Variables (en Cloudflare: tipo Text) ---
+CF_ACCOUNT_ID=ensayo-cuenta
+RTK_APP_ID=ensayo-app
+RTK_MEETING_ID=ensayo-reunion
+PRESET_GUEST=group_call_participant
+PRESET_HOST=group_call_host
+EVENT_OPENS_AT=2026-11-01T00:00:00-05:00
+EVENT_CLOSES_AT=2026-12-31T23:00:00-05:00
+FALLBACK_URL=
+HOST_DISPLAY_NAME=Salón · Promoción 81
+
+# true SOLO aquí y en las pruebas. En Cloudflare debe ser false.
+MOCK_RTK=true

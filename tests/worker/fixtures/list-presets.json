@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "data": [
+    { "id": "p-0001", "name": "group_call_host", "created_at": "2026-11-19T20:00:00.000Z", "updated_at": "2026-11-19T20:00:00.000Z" },
+    { "id": "p-0002", "name": "group_call_participant", "created_at": "2026-11-19T20:00:00.000Z", "updated_at": "2026-11-19T20:00:00.000Z" },
+    { "id": "p-0003", "name": "webinar_presenter", "created_at": "2026-11-19T20:00:00.000Z", "updated_at": "2026-11-19T20:00:00.000Z" },
+    { "id": "p-0004", "name": "webinar_viewer", "created_at": "2026-11-19T20:00:00.000Z", "updated_at": "2026-11-19T20:00:00.000Z" }
+  ],
+  "paging": { "start_offset": 0, "end_offset": 3, "total_count": 4 }
+}

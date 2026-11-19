@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "data": {
+    "id": "d8b1c1e2-0000-4000-8000-000000000001",
+    "token": "eyJhbGciOiJSUzI1NiJ9.sintetico.firma",
+    "created_at": "2026-11-21T17:00:00.000Z",
+    "updated_at": "2026-11-21T17:00:00.000Z",
+    "custom_participant_id": "guest-00000000-0000-4000-8000-000000000000",
+    "preset_name": "group_call_participant",
+    "name": "Carlos Prueba · Toronto",
+    "picture": null
+  }
+}
