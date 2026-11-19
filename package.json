@@ -15,7 +15,7 @@
     "test": "node --test --test-reporter=spec \"tests/worker/**/*.test.ts\"",
     "test:e2e": "playwright test --grep-invert @a11y",
     "test:a11y": "playwright test --grep @a11y",
-    "test:dist": "node --test --test-reporter=spec \"tests/dist/*.test.mjs\"",
+    "test:dist": "node --test --test-reporter=spec \"tests/compilado/*.test.mjs\"",
     "demo": "node scripts/demo.mjs",
     "notices": "node scripts/notices.mjs",
     "doctor": "node scripts/preflight.mjs",
